@@ -16,5 +16,7 @@ jobs:
         run: sudo apt install python3
       - name: install pytest
         run: sudo pip install -U pytest
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - name: run tests
         run: pytest hw6_tests.py
