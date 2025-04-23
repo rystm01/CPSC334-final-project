@@ -1,0 +1,14 @@
+struct Node {int val; array Node next;} 
+        void main() { 
+          Node n = new Node(20, new Node[2]); 
+          n.next[0] = new Node(10, new Node[1]); 
+          n.next[1] = new Node(30, null); 
+          n.next[0].next[0] = new Node(5, null); 
+          print(n.val); 
+          print(" ");         
+          print(n.next[0].val); 
+          print(" ");         
+          print(n.next[1].val); 
+          print(" ");         
+          print(n.next[0].next[0].val); 
+        } 

@@ -1,0 +1,47 @@
+// This program is a short guessing game where the user must guess
+// numbers until they guess 72, at which point the program ends.
+// It tests input, nested else if statements, while loops
+// and comparative expressions.
+
+
+
+void main()
+{
+    int secret = 72;
+    
+    bool condition = true;
+    while(condition){
+        print("Guess the secret number:\n");
+        int guess = stoi(input());
+        if(guess == secret)
+        {
+            print("You Got It!\n");
+            condition = false;
+        }
+        elseif(guess < secret){
+            print("Low!\n");
+            int diff = secret - guess;
+            if(diff > 50)
+            {
+                print("Way off!\n");
+            }
+            elseif(diff < 10)
+            {
+                print("Close!\n");
+            }
+        }
+        elseif(guess > secret){
+            print("High!\n");
+            int diff = guess - secret;
+            if(diff > 50)
+            {
+                print("Way off!\n");
+            }
+            elseif(diff < 10)
+            {
+                print("Close!\n");
+            }
+        }
+    }
+
+}
