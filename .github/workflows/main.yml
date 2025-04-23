@@ -1,5 +1,5 @@
 name: Test Project Self Hosted
-run-name: Building and Testing counter
+run-name: Building and Testing mypl
 on: [push]
 jobs:
   build:
@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu:latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@main
       - run: echo hello world
   test:
     timeout-minutes: 2
     runs-on: ubuntu:latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@main
+      - run: sudo apt install python3
+      - run: sudo apt install pytest
       - run: pytest hw6_tests.py     
