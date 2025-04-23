@@ -1,4 +1,4 @@
-name: Test Project Self Hosted
+name: Test MyPL
 run-name: Building and Testing mypl
 on: [push]
 jobs:
@@ -15,6 +15,6 @@ jobs:
       - name: install python
         run: sudo apt install python3
       - name: install pytest
-        run: sudo apt install pytest
+        run: sudo apt install python-pytest
       - name: run tests
         run: pytest hw6_tests.py     
