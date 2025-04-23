@@ -15,6 +15,6 @@ jobs:
       - name: install python
         run: sudo apt install python3
       - name: install pytest
-        run: sudo apt install python-pytest
+        run: sudo pip install -U pytest
       - name: run tests
-        run: pytest hw6_tests.py     
+        run: pytest hw6_tests.py
