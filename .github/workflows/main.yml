@@ -20,3 +20,12 @@ jobs:
         uses: actions/checkout@v4
       - name: run tests
         run: pytest hw6_tests.py
+  lint:
+    timeout-minutes: 2
+    runs-on: ubuntu:latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@main
+      - run: apt-get update && apt-get install -y make && apt-get install -y python3 && apt-get install -y python3-pytest && apt-get install -y adduser && apt-get install -y systemd
+      - run: make build
+      - run: make lint
