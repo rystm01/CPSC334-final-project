@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@main
+      - name: install lintian
+        run: sudo apt instal lintian
       - name: install python
         run: sudo apt install python3
       - name: install pytest
