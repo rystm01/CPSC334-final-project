@@ -26,5 +26,8 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@main
-      - run: apt-get update && apt-get install -y make && apt-get install -y python3 && apt-get install -y python3-pytest
+      - name: install python
+        run: sudo apt install python3
+      - name: install pytest
+        run: sudo pip install -U pytest
       - run: make lint
