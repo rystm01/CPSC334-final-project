@@ -9,3 +9,6 @@ clean:
 
 lint:
 	./lint.sh
+
+test:
+	pytest src/bin/hw6_tests.py
