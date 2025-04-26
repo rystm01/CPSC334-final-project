@@ -1,0 +1,22 @@
+name: Test MyPL
+run-name: Building and Testing mypl
+on: [push]
+jobs:
+  build:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        run: echo hello world
+  test:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: install python
+        run: sudo apt install python3
+      - name: install pytest
+        run: sudo pip install -U pytest
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: run tests
+        run: pytest hw6_tests.py
