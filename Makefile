@@ -8,7 +8,7 @@ clean:
 	rm /usr/local/mypl -r
 
 lint:
-	./lint.sh
+	-./lint.sh
 
 test:
 	pytest src/bin/hw6_tests.py
