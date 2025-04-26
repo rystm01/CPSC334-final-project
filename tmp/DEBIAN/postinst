@@ -1,0 +1,2 @@
+echo "make symlink for pl"
+sudo ln -s /usr/local/mypl/mypl.py /usr/local/bin/mypl

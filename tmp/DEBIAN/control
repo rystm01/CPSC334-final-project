@@ -1,0 +1,9 @@
+Package: mypl
+Version: 1.0.0
+Depends: python3, python3-pytest, make
+Section: programing language
+Priority: optional
+Architecture: all
+Maintainer: Ryan! <rstmary@zagmail.gonzaga.edu>
+Description: a Programming Language
+
